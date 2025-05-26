@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar/>
 
       {/* comment out other compoennts and uncomment the one you want to test */}
-      {/* <Login/>
-      <Signup/> */}
+      <Login/>
+      <Signup/>
 
       
       <Hero/>  
