@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -109,6 +109,7 @@ input {
 }
 
 .sign-in-container {
+	color: #90caf9;
 	left: 0;
 	width: 50%;
 	z-index: 2;
@@ -119,6 +120,7 @@ input {
 }
 
 .sign-up-container {
+	color: #90caf9;
 	left: 0;
 	width: 50%;
 	opacity: 0;
