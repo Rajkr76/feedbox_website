@@ -20,6 +20,12 @@ h1 {
 	margin: 0;
 }
 
+@media (max-width: 768px) {
+  .form-container h1 {
+    color: #90caf9;
+  }
+}
+
 h2 {
 	text-align: center;
 }
@@ -229,3 +235,38 @@ input {
 	height: 40px;
 	width: 40px;
 }
+
+/* Extra style for mobile tab buttons */
+button.active-tab {
+	background-color: #1976d2;
+	color: white;
+}
+
+.mobile-form {
+	width: 100%;
+	position: relative;
+}
+
+@media (max-width: 768px) {
+  .overlay-container {
+    display: none !important;
+  }
+
+  .form-container.mobile-form {
+    position: relative !important;
+    opacity: 1 !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  .sign-in-container,
+  .sign-up-container {
+    display: none !important;
+  }
+}
+
+
+
+
