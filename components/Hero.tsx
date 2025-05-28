@@ -7,7 +7,7 @@ const containerVariants = {
   visible: {
     transition: {
       staggerChildren: 0.3,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
@@ -19,9 +19,12 @@ const fadeUp = {
 
 export default function HeroSection() {
   return (
-    <section className="h-screen w-full text-white flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 pt-24 md:pt-32">
-      {/* Neon pulse circle */}
-      <div className="absolute w-[600px] h-[600px] bg-cyan-500/20 blur-3xl rounded-full -top-40 -left-40 animate-pulse-slow"></div>
+    <section className="h-screen w-full text-white flex items-center justify-center relative overflow-hidden pt-24 md:pt-32 pb-10">
+      {/* Neon Pulse BG */}
+      <div className="absolute w-[600px] h-[600px] bg-cyan-500/20 blur-3xl rounded-full -top-40 -left-40 animate-pulse-slow" />
+      
+      {/* Divider between Hero and About */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-cyan-400/20 blur-sm" />
 
       <motion.div
         className="z-10 max-w-4xl px-6 text-left"
@@ -33,10 +36,10 @@ export default function HeroSection() {
           variants={fadeUp}
           className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight"
         >
-          {/* "Feedbox" remains at the main H1 size (text-5xl / md:text-7xl) */}
-          <span className="drop-shadow-[0_0_12px_rgb(6_182_212)] drop-shadow-[0_0_24px_rgb(6_182_212)] text-white">Feedbox</span>{' '}
-          <br />{' '}
-          {/* CHANGED: Added text-4xl (default) and md:text-6xl (for larger screens) to make it slightly smaller */}
+          <span className="drop-shadow-[0_0_12px_rgb(6_182_212)] text-white">
+            Feedbox
+          </span>
+          <br />
           <span className="text-cyan-400 drop-shadow-[0_0_8px_rgb(6_182_212)] text-4xl md:text-6xl">
             College Club
           </span>
