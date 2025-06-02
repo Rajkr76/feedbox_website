@@ -5,10 +5,7 @@ import { motion } from 'framer-motion';
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.3,
-      ease: 'easeOut',
-    },
+    transition: { staggerChildren: 0.3, ease: 'easeOut' },
   },
 };
 
@@ -19,12 +16,10 @@ const fadeUp = {
 
 export default function HeroSection() {
   return (
-    <section className="h-screen w-full text-white flex items-center justify-center relative overflow-hidden pt-24 md:pt-32 pb-10">
-      {/* Neon Pulse BG */}
-      <div className="absolute w-[600px] h-[600px] bg-cyan-500/20 blur-3xl rounded-full -top-40 -left-40 animate-pulse-slow" />
-      
-      {/* Divider between Hero and About */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-cyan-400/20 blur-sm" />
+    <section className="h-screen w-full bg-[#121212] text-white flex items-center justify-center relative pt-24 md:pt-32 pb-10 overflow-hidden">
+      {/* Subtle Background Pulse */}
+      <div className="absolute w-[500px] h-[500px] bg-cyan-400/10 blur-2xl rounded-full -top-40 -left-40 animate-pulse-slow" />
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-cyan-400/15 blur-sm" />
 
       <motion.div
         className="z-10 max-w-4xl px-6 text-left"
@@ -34,27 +29,25 @@ export default function HeroSection() {
       >
         <motion.h1
           variants={fadeUp}
-          className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight"
+          className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight"
         >
-          <span className="drop-shadow-[0_0_12px_rgb(6_182_212)] text-white">
-            Feedbox
-          </span>
+          <span className="text-white drop-shadow-[0_0_4px_rgb(0,212,255)]">Feedbox</span>
           <br />
-          <span className="text-cyan-400 drop-shadow-[0_0_8px_rgb(6_182_212)] text-4xl md:text-6xl">
+          <span className="text-cyan-400 text-4xl md:text-6xl drop-shadow-[0_0_3px_rgb(0,212,255)]">
             College Club
           </span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]"
+          className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl"
         >
-          Unlocking potential, fostering innovation, and paving the way for a brighter tomorrow.
+          <span className="text-cyan-300">Unlocking potential</span>, fostering innovation, and paving the way for a brighter tomorrow.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-10">
-          <button className="button-neon px-6 py-3 cursor-pointer">
-            GET STARTED →
+          <button className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-full shadow-sm transition">
+            Get Started →
           </button>
         </motion.div>
       </motion.div>
